@@ -1,5 +1,5 @@
-@import "styles.scss";
-@import "functions";
+@import "../styles/styles.scss";
+@import "../styles/functions";
 
 $backgroundColor: 'backgroundColor';
 $foregroundColor: 'foregroundColor';
@@ -12,8 +12,8 @@ $foregroundColor: 'foregroundColor';
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 30px;
-    width: 100%;
-    min-height: 800px;
+    width: 90%;
+    min-height: 750px;
 
     h2 {
         display: flex;

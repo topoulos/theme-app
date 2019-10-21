@@ -1,8 +1,12 @@
 <div class="app-component" [ngClass]="(theme | async)">
-  <h2>My Theme Page</h2>
-  <div></div>
+
+  <div class="main-box">My Theme Page</div>
+
   <p>This is the {{theme | async}}.</p>
+
   <select (change)="changeTheme($event.target)" [ngClass]="'theme-picker-' + (theme | async)">
-    <option *ngFor="let theme of themes" [value]="theme">{{theme}}</option>
+    <option *ngFor="let theme of themes" [value]="theme">
+      {{theme}}
+    </option>
   </select>
 </div>

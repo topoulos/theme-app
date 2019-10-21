@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -16,7 +16,6 @@ export class AppComponent {
 
   changeTheme(themeValue) {
     this.theme.next(themeValue.value);
-    console.log(themeValue.value);
   }
 }
 

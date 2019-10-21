@@ -5,6 +5,9 @@ $backgroundColor: 'backgroundColor';
 $foregroundColor: 'foregroundColor';
 
 .app-component  {
+    position: absolute;
+    top: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     vertical-align: center;
@@ -12,10 +15,10 @@ $foregroundColor: 'foregroundColor';
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 30px;
-    width: 90%;
+    width: 99%;
     min-height: 750px;
 
-    h2 {
+    .main-box {
         display: flex;
         align-content: center;
         flex-direction: row;
@@ -30,18 +33,14 @@ $foregroundColor: 'foregroundColor';
         flex-basis: auto;
     }
 
-    div {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: auto;
-    }
-
     p {
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: auto;
     }
-
+    select:focus {
+        outline:0;
+    }
 }
 
 @each $theme in map-keys($map: $themes) {
@@ -49,7 +48,7 @@ $foregroundColor: 'foregroundColor';
         background-color: getColor($theme, $backgroundColor);
         color: getColor($theme,$foregroundColor);
 
-        h2 {
+        .main-box {
            border: 1px solid getColor($theme,$foregroundColor);
         }
     }
@@ -64,6 +63,5 @@ $foregroundColor: 'foregroundColor';
         border: 1px solid getColor($theme,$foregroundColor);
         background-color: getColor($theme, $backgroundColor);
         color: getColor($theme,$foregroundColor);
-
     }
 }
